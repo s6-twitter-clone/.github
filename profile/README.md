@@ -34,7 +34,7 @@ This means that each service stores a copy of the data they need. Date is owned 
 Services can subscribe to specific events and update their internal copy of data when an event comes in.
 
 Below you can see the C2 diagram for Twiddit which showcases the different services.
-![architecture](https://github.com/s6-twitter-clone/documentation/images/diagrams/architecture.png)
+![architecture](documentation/images/diagrams/architecture.png)
 
 ## Structure
 The project consists of the following repositories.
