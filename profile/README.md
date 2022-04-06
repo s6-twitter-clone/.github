@@ -34,7 +34,7 @@ This means that each service stores a copy of the data they need. Date is owned 
 Services can subscribe to specific events and update their internal copy of data when an event comes in.
 
 Below you can see the C2 diagram for Twiddit which showcases the different services.
-![architecture](documentation/images/diagrams/architecture.png)
+![architecture](https://github.com/s6-twitter-clone/documentation/images/diagrams/architecture.png)
 
 ## Structure
 The project consists of the following repositories.
@@ -56,35 +56,35 @@ Here you will also be able to find the architecture diagrams and wireframes for 
 This repository will host the post service.
 The post service is used to create and retrieve posts. As such the post service *owns* the post data. Only the post service can send events to update post data.
 
-[Post service readme](post-service/readme)
+[Post service readme](https://github.com/s6-twitter-clone/post-service/readme)
 
 ### user-service
 This repository contains the user service which will be in charge of authorization.
 The user service will also be in charge of managing users
 
-[User service readme](user-service/readme)
+[User service readme](https://github.com/s6-twitter-clone/user-service/readme)
 
 ### feed-service
 The Feed service is in charge of creating personalized timelines for users based on their own posts and the posts of the users they follow. The Feed service itself does not own any data. To create timelines it consumes events from the post service, the user service and the follower service. 
 
-[User service readme](feed-service/readme)
+[User service readme](https://github.com/s6-twitter-clone/feed-service/readme)
 
 ### follower-service
 The follower service is in charge of keeping track of followers and blocked users.
 when a user follows another user, they get their posts in their content feed.
 Blocking a user prevents them from seeing your content.
 
-[Follower service readme](follower-service/readme)
+[Follower service readme](https://github.com/s6-twitter-clone/follower-service/readme)
 
 ### frontend
 The frontend repository contains the frontend for Twiddit.
 Twiddit uses React as JS framework and Bootstrap for styling. 
 To serve the production build of the frontend Nginx is used as a web server.
 
-[Frontend readme](frontend/README.md)
+[Frontend readme](https://github.com/s6-twitter-clone/frontend/README.md)
 
 ### trend service
 The trend service keeps track of the currently most popular subjects on the platform.
 To do this it consumes the events from the post service and periodically count the number of occurrences of the tags within the posts. The top ten results will then be stored
 
-[Trend service readme](trend-service/readme)
+[Trend service readme](https://github.com/s6-twitter-clone/trend-service/readme)
