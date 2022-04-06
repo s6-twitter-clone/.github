@@ -53,6 +53,8 @@ The project consists of the following repositories.
 This directory contains a general readme and documents for the project.
 Here you will also be able to find the architecture diagrams and wireframes for the project.
 
+[Documentation](https://github.com/s6-twitter-clone/documentation/)
+
 ### post-service
 This repository will host the post service.
 The post service is used to create and retrieve posts. As such the post service *owns* the post data. Only the post service can send events to update post data.
