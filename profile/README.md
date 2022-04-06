@@ -30,10 +30,11 @@ Below you will find the user stories for each actor.
 ## Architecture
 Twiddit is built using a microservice architecture and uses the [Event-Carried State Transfer](https://martinfowler.com/articles/201701-event-driven.html) pattern. 
 
-This means that each service stores a copy of the data they need. Date is owned by a single service and data can only be updated by the service that owns it. When a piece of data changes an event is sent containing the new data.
+This means that each service stores a copy of the data they need. Data is owned by a single service and data can only be updated by the service that owns it. When a piece of data changes an event is sent containing the new data.
 Services can subscribe to specific events and update their internal copy of data when an event comes in.
 
 Below you can see the C2 diagram for Twiddit which showcases the different services.
+
 ![architecture](https://github.com/s6-twitter-clone/documentation/blob/master/images/diagrams/architecture.png)
 
 ## Structure
@@ -67,7 +68,7 @@ The user service will also be in charge of managing users
 ### feed-service
 The Feed service is in charge of creating personalized timelines for users based on their own posts and the posts of the users they follow. The Feed service itself does not own any data. To create timelines it consumes events from the post service, the user service and the follower service. 
 
-[User service](https://github.com/s6-twitter-clone/feed-service/)
+[Feed service](https://github.com/s6-twitter-clone/feed-service/)
 
 ### follower-service
 The follower service is in charge of keeping track of followers and blocked users.
